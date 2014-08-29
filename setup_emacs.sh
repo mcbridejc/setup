@@ -1,0 +1,13 @@
+mkdir -p tmp
+
+cd tmp
+
+AUTOCOMPLETE_VERSION=1.3.1
+AUTOCOMPLETE_NAME=auto-complete-$AUTOCOMPLETE_VERSION
+AUTOCOMPLETE_TARBALL=$AUTOCOMPLETE_NAME.tar.bz2
+if [ ! -e $AUTOCOMPLETE_TARBALL ]; then 
+    wget http://cx4a.org/pub/auto-complete/$AUTOCOMPLETE_TARBALL
+fi
+
+tar -xjf $AUTOCOMPLETE_TARBALL
+cd $AUTOCOMPLETE_NAME
